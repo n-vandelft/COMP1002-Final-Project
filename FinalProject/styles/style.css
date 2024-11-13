@@ -9,7 +9,11 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
- 
+
+.home-body{
+    background-image: url();
+    background-size: auto;
+}
 /* Header */
 .header {
     background-color: #e60012;
@@ -23,6 +27,16 @@ body {
 .logo {
     height: 50px;
 }
+
+.home-title{
+    text-align: center;
+    padding: .5rem;
+}
+
+ .home-text{
+    text-align: center;
+    padding: .5rem;
+ }
  
 .nav-list {
     list-style: none;
