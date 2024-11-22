@@ -1,0 +1,158 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    transition: all .6s linear;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0; 
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main img {
+    width: 59%;
+}
+
+header nav {
+    display: flex;
+    border-bottom: 1px solid gray;
+    background: #e60012;
+}
+
+header nav img {
+    max-height: 80px;    
+}
+
+header nav ul {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex: 1;
+
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #f4f4f4;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    transition: background-color .7s linear, color .4s linear;
+}
+
+
+nav ul li a:hover { 
+    color: #333; 
+    width: 200px;
+    letter-spacing: 8px;
+    font-weight: bold; 
+    font-style:italic;
+    background-color: #f4f4f4;
+    border:solid 4px#333;
+    border-radius: 25px;
+}
+
+nav ul li a.active { 
+    color: #333; 
+    width: 200px;
+    letter-spacing: 8px;
+    font-weight: bold; 
+    font-style:italic;
+    background-color: #f4f4f4;
+    border:solid 4px#333;
+    border-radius: 25px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top: 3px solid gray;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    background: #e60012;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+footer ul li {
+    list-style-type: none;
+    margin: 1rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color:#f4f4f4;;
+}
+
+
+footer div p {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #f4f4f4;
+    font-size:smaller;
+    margin: 0;
+    padding: .4rem;
+}
+
+@media only screen and (max-width: 430px) {
+
+
+    header nav img {
+        max-height: 50px;
+    }
+    header nav ul li a { 
+        font-size: .9rem;
+        /* display: none; */
+    }
+
+    main h1 {
+        font-size: 1.3rem;
+    }
+
+    main h2 {
+        font-size: 1rem;
+    }
+
+    .menu-icon { display: flex; }
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 430px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
