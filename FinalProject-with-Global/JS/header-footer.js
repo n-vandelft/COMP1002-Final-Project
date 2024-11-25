@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="services.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Contact</a></li>
             </ul>
         </nav>`;
