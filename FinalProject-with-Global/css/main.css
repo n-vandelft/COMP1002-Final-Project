@@ -23,7 +23,6 @@ main img {
 
 header nav {
     display: flex;
-    border-bottom: 1px solid gray;
     background: #e60012;
 }
 
@@ -79,7 +78,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /*border-top: 3px solid gray;*/ mh - got rid of gray line at top of header
 }
 
 footer ul {
