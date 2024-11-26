@@ -26,64 +26,64 @@ html, body {
     display: flex;
     width: 100%;
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
     overflow: hidden;
     position: relative;
-    height: 100vh; /* Ensure the layout fills the full height */
+    height: 100%; /* Ensure the layout fills the full height */
 }
 
 /* Sidebar */
+/* Sidebar default state */
 .sidebar {
     position: relative;
-    width: 100px; /* Default sidebar width */
+    width: 125px; /* Default width */
     background-color: #e60012;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    transition: width 0.3s ease; /* Smooth expansion */
+    transition: width 0.3s ease;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
-.sidebar:hover {
-    width: 300px; /* Sidebar expands on hover */
+.sidebar.expanded {
+    width: 380px; /* Expanded width */
 }
 
-.sidebar img {
-    width: 80%;
-    margin-bottom: 2rem;
-}
-
-.sidebar-nav {
-    list-style: none;
-    width: 100%;
-    text-align: left;
-    padding: 0;
-}
-
-.sidebar-nav li {
-    margin: 1rem 0;
-}
-
-.sidebar-nav li a {
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: block;
+/* Sidebar items */
+.bar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.sidebar-nav li a:hover {
+.bar-item .icon {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.bar-item .text {
+    font-size: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none; /* Text hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+/* Sidebar expanded state: show text */
+.sidebar.expanded .bar-item .text {
+    display: inline; /* Show text when expanded */
+}
+
+/* Hover effects */
+.bar-item:hover {
     background-color: #ff7f7f;
 }
 
-.hover-arrow {
-    font-size: 1.5rem;
-    cursor: pointer;
-}
 
 /* Product Grid */
 .product-grid {
@@ -97,8 +97,7 @@ html, body {
 
 /* Product Items */
 .product-item {
-    background-color: #ddd;
-    border: 1px solid #ccc;
+    background-color: transparent;
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
@@ -112,16 +111,22 @@ html, body {
 
 .product-item:hover {
     transform: scale(1.05); /* Hover zoom effect */
-    background-color: #ccc;
+    
 }
 
 .product-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%; /* Ensure the image spans the card width */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 250px; /* Limit the maximum height for uniformity */
+    object-fit: cover; /* Ensures the image covers the allotted space without distortion */
+    border-radius: 8px; /* Matches the card's border radius */
+    display: block; /* Prevents inline spacing issues */
+    margin-bottom: 0.5rem; /* Adds space between the image and the text */
 }
 
 .product-item p {
     margin-top: 0.5rem;
 }
+
+
+
