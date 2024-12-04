@@ -6,176 +6,8 @@
 
 /* html and body*/
 html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
     background-color: black;
     background-image: url(../images/background.jpg);/*Background image from freepik.com*/
-}
-
-/* Main Content */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* images default size */
-main img {
-    width: 59%;
-}
-
-/* Header Styles */
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #e60012;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 100;
-}
-
-/* header Logo*/
-header nav img {
-    max-height: 80px;
-}
-
-/* Navigation List */
-.nav-list {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navigation List Items */
-.nav-list li a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* Navigation List Items Hover */
-.nav-list li a:hover {
-    background: #fff;
-    color: #e60012;
-}
-
-/* Hamburger Menu Icon */
-.menu-icon {
-    display: none; /* Hidden Mode */
-    cursor: pointer;
-    font-size: 2rem;
-    color: #fff;
-    padding: 10px;
-}
-
-/* Mobile Navigation Styles */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block; /* Show hamburger menu on mobile */
-    }
-
-    .nav-list {
-        display: none; /* Hidden by default */
-        flex-direction: column; /* Stack items vertically */
-        position: fixed; /* Ensure it overlays content */
-        top: 60px; /* Align below header */
-        left: 0;
-        width: 100%; /* Full width */
-        background: #e60012;
-        padding: 10px 0;
-        z-index: 999; /* Ensure it appears above other elements */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-    }
-    /* Navigation List Active */
-    .nav-list.active {
-        display: flex; /* Show when active class is added */
-        animation: slideIn 0.3s ease-out;
-    }
-    /* Navigation List Items */
-    .nav-list li {
-        text-align: center;
-        padding: 10px 0;
-    }
-    /* Navigation List Items Hover */
-    .nav-list li a {
-        font-size: 1.5rem;
-    }
-    /* Animation for sliding the menu in */
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-}
-
-/* Footer Styles */
-footer {
-    background-color: #e60012; /* Footer background */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto; /* Push the footer to the bottom */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-/* Footer Navigation */
-footer ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background: #e60012;
-}
-/* Footer Navigation Items */
-footer ul li {
-    margin: 1rem;
-}
-/* Footer Navigation Links */
-footer ul li a {
-    text-decoration: none;
-    color: #f4f4f4;
-}
-/* Footer Paragraph */
-footer div p {
-    text-align: center;
-    background-color: black;
-    color: #f4f4f4;
-    font-size: smaller;
-    margin: 0;
-    padding: 0.4rem;
-}
-/* Extra Mobile Adjustments */
-@media (max-width: 430px) {
-    header nav img {
-        max-height: 50px;
-    }
-
-    header nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    main h1 {
-        font-size: 1.3rem;
-    }
-
-    main h2 {
-        font-size: 1rem;
-    }
 }
 
 
@@ -196,7 +28,7 @@ footer div p {
     padding: 10px;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 768px) {
     .menu-icon {
         display: block;
     }
@@ -273,7 +105,7 @@ footer div p {
     transition: background-color 0.6s ease;
 }
 .active, .dot:hover{
-    background-color: #717171;
+    background-color: #e60012;
 }
 /*Animation*/
 .fade{
@@ -303,4 +135,3 @@ footer div p {
     justify-content: space-between;
     flex-shrink: 3;
 }
-
