@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/* Html and body */
 html, body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -32,11 +33,10 @@ html, body {
     height: 100%; /* Ensure the layout fills the full height */
 }
 
-/* Sidebar */
-/* Sidebar default state */
+/* Sidebar - minimized */
 .sidebar {
     position: relative;
-    width: 100px; /* Default width */
+    width: 100px;
     background-color: #e60012;
     color: #fff;
     display: flex;
@@ -124,11 +124,13 @@ html, body {
     text-align: center;
 }
 
+/*hover effect for Prouct items*/
 .product-item:hover {
     transform: scale(1.05); /* Hover zoom effect */
     
 }
 
+/* Product Image */
 .product-item img {
     width: 100%; /* Ensure the image spans the card width */
     height: auto; /* Maintain the aspect ratio */
@@ -139,12 +141,14 @@ html, body {
     margin-bottom: 0.5rem; /* Adds space between the image and the text */
 }
 
+/* Price of Product */
 .price {
     color: grey;
     font-size: 22px;
-  }
+}
   
-  .product-item button {
+/* Add to Cart Button */
+.product-item button {
     border: none;
     outline: 0;
     padding: 12px;
@@ -155,28 +159,30 @@ html, body {
     width: 100%;
     font-size: 18px;
     border-radius: 5px;
-  }
+}
   
-  .product-item button:hover {
+  /* Add to Cart Button Hover */
+.product-item button:hover {
     opacity: 0.7;
-  }
+}
 
+  /* Product Title */
 .product-item p {
     margin-top: 0.5rem;
 }
 
+/* Banner Header for Product grid*/
 .banner {
     display: grid; /* Use grid layout */
-    grid-column: 1 / -1; /* Span the entire grid horizontally */
-    grid-template-columns: 1fr auto; /* Define two columns: one for text, one for any extra content */
-    justify-content: space-between; /* Space out elements within the banner */
-    align-items: center; /* Vertically center content */
-    border-bottom: 2px solid #333; /* Add the bottom border line */
-    padding: 1rem; /* Padding for spacing inside the banner */
-    background-color: #fff; /* Optional: Set a background color */
-    margin: 0; /* Remove any unintended margin */
-    width: 100%; /* Ensure it spans the full width of the parent */
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    padding: 1rem;
+    background-color: #fff;
+    margin: 0;
+    width: 100%;
     box-sizing: border-box; /* Include padding in the width calculation */
     font-size: 30px;;
 }
-
